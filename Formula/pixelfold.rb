@@ -1,25 +1,25 @@
 class Pixelfold < Formula
   desc "Terminal protein structure viewer and residue interaction network engine"
   homepage "https://github.com/fuyu-myk/pixelfold"
-  version "1.0.0"
+  version "2.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v1.0.0/pixelfold-aarch64-apple-darwin.tar.xz"
-      sha256 "99a0eb4f29e692318b90740ff048d4dd3493dec599d2a529094dfe04e6579e7e"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v2.0.0/pixelfold-aarch64-apple-darwin.tar.xz"
+      sha256 "0196ed9d37d10db1c6c0f89ea38f2e8cf1e9da988514c2023d7ec71e037958ce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v1.0.0/pixelfold-x86_64-apple-darwin.tar.xz"
-      sha256 "5623221b2f436c8249c5b5a8dfa38eab0fb1231a476284a537c777b636ad3edf"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v2.0.0/pixelfold-x86_64-apple-darwin.tar.xz"
+      sha256 "4dfc6d07dc349e71cb3265e54f422090dfdb5acca8c6d5eee05a7858afdf0632"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v1.0.0/pixelfold-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "908ad42fbc581373505bea4494a6b43bf0103652004b039bfa199a7776934ba4"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v2.0.0/pixelfold-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "35eacd0b2307badeda62f4121906a339fa101d5172c893f98fb2bb748d121615"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v1.0.0/pixelfold-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b931b044bb41abb73da9722a5cc7aa71b2d44b5cb32672e562dfb1639de06283"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v2.0.0/pixelfold-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9f7360238b09e91fa46fad49267ba1ba4b6aafb3b029d38b8e861bcb7310b524"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Pixelfold < Formula
   end
 
   def install
-    bin.install "pixelfold" if OS.mac? && Hardware::CPU.arm?
-    bin.install "pixelfold" if OS.mac? && Hardware::CPU.intel?
-    bin.install "pixelfold" if OS.linux? && Hardware::CPU.arm?
-    bin.install "pixelfold" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "pixelfold"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "pixelfold"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "pixelfold"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "pixelfold"
+    end
 
     install_binary_aliases!
 
