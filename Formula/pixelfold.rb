@@ -1,25 +1,25 @@
 class Pixelfold < Formula
   desc "Terminal protein structure viewer and residue interaction network engine"
   homepage "https://github.com/fuyu-myk/pixelfold"
-  version "3.0.0"
+  version "4.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v3.0.0/pixelfold-aarch64-apple-darwin.tar.xz"
-      sha256 "4167d3d18ce6947ec6dac2a24e6a9b9ce9331cf04753a36f9eb83063eb49ae19"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v4.0.0/pixelfold-aarch64-apple-darwin.tar.xz"
+      sha256 "0f5c8e034a239f1f44536612a00863ec77123fa7a575d8fc61046c47e7e582c4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v3.0.0/pixelfold-x86_64-apple-darwin.tar.xz"
-      sha256 "df517c6f96084db0f286ce282eb67bf9f4c19a004acf6528621e9c39348beebb"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v4.0.0/pixelfold-x86_64-apple-darwin.tar.xz"
+      sha256 "846794977bedb613db64404eea7e3a45159eed18bd4a06b2851b381b5121d4e5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v3.0.0/pixelfold-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9e08d870440d91459c8bca613d913987d66ab0e35a0dbac0e1351c096747ade5"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v4.0.0/pixelfold-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ce84b0dd9a8524e7e3e6d1f6dc6fb0b4c5cca4771fc9dcd8e738f5722df50b8b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fuyu-myk/pixelfold/releases/download/v3.0.0/pixelfold-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f7be8c1067f243470e46c95b50472a7ccf53615cb2dceccef6f792946f98adb9"
+      url "https://github.com/fuyu-myk/pixelfold/releases/download/v4.0.0/pixelfold-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3ebd9dd035be1bd181246e77a6cba92d2dc0313d289f965349565a44ea6d9ae7"
     end
   end
   license "MIT"
